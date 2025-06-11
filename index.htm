@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neurodivercity | Home</title>
+    <meta name="title" content="Neurodivercity | Home" />
+    <meta
+      name="description"
+      content="A vibrant community celebrating neurodiversity. Where different brains unite, thrive, and reshape the world."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://neurodivercity.community/" />
+    <meta property="og:title" content="Neurodivercity | Home" />
+    <meta
+      property="og:description"
+      content="A vibrant community celebrating neurodiversity. Where different brains unite, thrive, and reshape the world."
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://neurodivercity.community/" />
+    <meta property="twitter:title" content="Neurodivercity | Home" />
+    <meta
+      property="twitter:description"
+      content="A vibrant community celebrating neurodiversity. Where different brains unite, thrive, and reshape the world."
+    />
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Josefin Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              neurospicy: ["Montserrat", "sans-serif"],
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+      * {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .text-shadow-soft {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .brain-pattern {
+        background-image: 
+          radial-gradient(circle at 25% 25%, rgba(0, 0, 0, 0.05) 2px, transparent 2px),
+          radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.05) 3px, transparent 3px),
+          radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+        background-size: 40px 40px, 60px 60px, 20px 20px;
+      }
+
+      .floating-brain {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .floating-brain:nth-child(2) {
+        animation-delay: -2s;
+      }
+
+      .floating-brain:nth-child(3) {
+        animation-delay: -4s;
+      }
+
+      .floating-brain:nth-child(4) {
+        animation-delay: -1s;
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-10px) rotate(1deg);
+        }
+        50% {
+          transform: translateY(-5px) rotate(0deg);
+        }
+        75% {
+          transform: translateY(-15px) rotate(-1deg);
+        }
+      }
+
+      .hover-lift {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .hover-lift:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-black min-h-screen flex flex-col font-neurospicy">
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full px-6 py-4 flex justify-between items-center z-50 bg-white border-b border-gray-900"
+    >
+      <a href="#" class="text-xl font-bold tracking-normal">
+        Neuro<span class="text-gray-600">divercity</span>
+      </a>
+      <div class="flex gap-8 hidden md:block">
+        <a
+          href="#community"
+          class="text-sm hover:bg-black hover:text-white px-3 py-1 transition-all"
+          >COMMUNITY</a
+        >
+        <a
+          href="#resources"
+          class="text-sm hover:bg-black hover:text-white px-3 py-1 transition-all"
+          >RESOURCES</a
+        >
+        <a
+          href="#guidelines"
+          class="text-sm hover:bg-black hover:text-white px-3 py-1 transition-all"
+          >GUIDELINES</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+      class="h-screen flex flex-col justify-center items-center pt-16 relative overflow-hidden brain-pattern"
+    >
+      <div class="z-10 px-8 max-w-5xl text-center">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          Welcome to the<br>
+          <span class="text-shadow-soft">NEURO<span class="text-gray-600">DIVERCITY</span></span>
+        </h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
+          A community where different brains unite, thrive, and reshape the world. 
+          We celebrate neurodiversity, support each other, and prove that 
+          thinking differently is our superpower.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://chat.whatsapp.com/D5t1Eaq0XOw6RaMyK1L7JS"
+            target="_blank"
+            class="bg-black text-white px-8 py-4 text-sm uppercase tracking-wide hover:bg-gray-800 transition-all hover-lift"
+            ><i class="fab fa-whatsapp mr-2"></i>Join the Community</a
+          >
+          <a
+            href="#learn"
+            class="border-2 border-black px-8 py-4 text-sm uppercase tracking-wide hover:bg-black hover:text-white transition-all hover-lift"
+            ><i class="fas fa-brain mr-2"></i>Learn More</a
+          >
+        </div>
+      </div>
+      
+      <!-- Floating brain elements with subtle animation -->
+      <div class="floating-brain absolute top-20 left-10 w-16 h-16 border-2 border-gray-300 opacity-50"></div>
+      <div class="floating-brain absolute bottom-32 right-20 w-12 h-12 bg-gray-200 opacity-60"></div>
+      <div class="floating-brain absolute bottom-20 left-1/4 w-6 h-6 border border-black"></div>
+    </header>
+
+    <!-- What We're About -->
+    <section id="learn" class="py-24 px-8">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">
+          We Are <span class="text-gray-600">NOT</span> a Support Group
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+          <div class="border-2 border-black p-8 hover-lift">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-brain text-3xl mr-4"></i>
+              <h3 class="text-2xl font-bold">What We ARE</h3>
+            </div>
+            <ul class="space-y-3 text-lg">
+              <li><i class="fas fa-check text-green-600 mr-2"></i>A fun landing space for neurospicy humans</li>
+              <li><i class="fas fa-check text-green-600 mr-2"></i>Evidence-based and neurodiversity-affirming</li>
+              <li><i class="fas fa-check text-green-600 mr-2"></i>A place to find your people and share experiences</li>
+              <li><i class="fas fa-check text-green-600 mr-2"></i>Celebrating all neurotypes without "fixing" anyone</li>
+              <li><i class="fas fa-check text-green-600 mr-2"></i>Building community through shared understanding</li>
+            </ul>
+          </div>
+
+          <div class="border-2 border-gray-400 p-8 bg-gray-50">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-times text-3xl mr-4 text-gray-700"></i>
+              <h3 class="text-2xl font-bold text-gray-700">What We're NOT</h3>
+            </div>
+            <ul class="space-y-3 text-lg text-gray-600">
+              <li><i class="fas fa-times text-red-500 mr-2"></i>A therapy or support group</li>
+              <li><i class="fas fa-times text-red-500 mr-2"></i>A place for trauma dumping</li>
+              <li><i class="fas fa-times text-red-500 mr-2"></i>Offering professional medical advice</li>
+              <li><i class="fas fa-times text-red-500 mr-2"></i>A dating platform</li>
+              <li><i class="fas fa-times text-red-500 mr-2"></i>Tolerating hate or discrimination</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center bg-black text-white p-12">
+          <div class="flex justify-center mb-4">
+            <i class="fas fa-quote-left text-4xl text-gray-400"></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-4">Our Philosophy</h3>
+          <p class="text-xl max-w-4xl mx-auto leading-relaxed">
+            "Neurodiversity is not about being broken and needing to be fixed. 
+            It's about being beautifully different and needing to be understood, 
+            supported, and celebrated for the unique perspectives we bring to the world."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Guidelines Preview -->
+    <section id="guidelines" class="py-24 px-8 bg-gray-50 brain-pattern">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">
+          Community <span class="text-gray-600">Guidelines</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Guideline 1 -->
+          <div class="bg-white border-2 border-black p-6 hover-lift">
+            <div class="w-12 h-12 bg-black mb-4 flex items-center justify-center">
+              <i class="fas fa-handshake text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Respect & Consent</h3>
+            <p>No discussing others' diagnoses without consent. Ask before DMing. Respect boundaries.</p>
+          </div>
+
+          <!-- Guideline 2 -->
+          <div class="bg-white border-2 border-black p-6 hover-lift">
+            <div class="w-12 h-12 bg-black mb-4 flex items-center justify-center">
+              <i class="fas fa-heart text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Inclusive Language</h3>
+            <p>Use person-first or identity-first language as preferred. No ableist slurs or harmful stereotypes.</p>
+          </div>
+
+          <!-- Guideline 3 -->
+          <div class="bg-white border-2 border-black p-6 hover-lift">
+            <div class="w-12 h-12 bg-black mb-4 flex items-center justify-center">
+              <i class="fas fa-peace text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Keep It Chill</h3>
+            <p>We're here for good vibes. No drama, no dogpiling, no sealioning. Just humans being cool to humans.</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#full-guidelines"
+            class="border-2 border-black px-8 py-4 text-sm uppercase tracking-wide hover:bg-black hover:text-white transition-all inline-block hover-lift"
+            ><i class="fas fa-scroll mr-2"></i>Read Full Guidelines</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources" class="py-24 px-8">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">
+          <span class="text-gray-600">Resources</span> & Links
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Resource 1 -->
+          <div class="border-2 border-black p-6 hover-lift">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-book text-2xl mr-3"></i>
+              <h3 class="text-xl font-bold">Understanding Neurodiversity</h3>
+            </div>
+            <p class="mb-4">Learn about the neurodiversity movement and different neurotypes.</p>
+            <a href="#" class="text-sm underline hover:no-underline">Explore →</a>
+          </div>
+
+          <!-- Resource 2 -->
+          <div class="border-2 border-black p-6 hover-lift">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-briefcase text-2xl mr-3"></i>
+              <h3 class="text-xl font-bold">Workplace Advocacy</h3>
+            </div>
+            <p class="mb-4">Tools and templates for requesting accommodations at work.</p>
+            <a href="#" class="text-sm underline hover:no-underline">Download →</a>
+          </div>
+
+          <!-- Resource 3 -->
+          <div class="border-2 border-black p-6 hover-lift">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-phone text-2xl mr-3"></i>
+              <h3 class="text-xl font-bold">Crisis Resources</h3>
+            </div>
+            <p class="mb-4">Emergency contacts and mental health resources for tough times.</p>
+            <a href="#" class="text-sm underline hover:no-underline">Access →</a>
+          </div>
+
+          <!-- Resource 4 -->
+          <div class="border-2 border-black p-6 hover-lift">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-tools text-2xl mr-3"></i>
+              <h3 class="text-xl font-bold">Sensory Tools</h3>
+            </div>
+            <p class="mb-4">Fidget toys, noise-cancelling options, and sensory regulation tips.</p>
+            <a href="#" class="text-sm underline hover:no-underline">Browse →</a>
+          </div>
+
+          <!-- Resource 5 -->
+          <div class="border-2 border-black p-6 hover-lift">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-users text-2xl mr-3"></i>
+              <h3 class="text-xl font-bold">Local Communities</h3>
+            </div>
+            <p class="mb-4">Find neurodivergent meetups and support groups in your area.</p>
+            <a href="#" class="text-sm underline hover:no-underline">Find →</a>
+          </div>
+
+          <!-- Resource 6 -->
+          <div class="border-2 border-black p-6 hover-lift">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-microscope text-2xl mr-3"></i>
+              <h3 class="text-xl font-bold">Research & Studies</h3>
+            </div>
+            <p class="mb-4">Latest neurodiversity research and evidence-based information.</p>
+            <a href="#" class="text-sm underline hover:no-underline">Read →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="py-24 px-8 bg-black text-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8">
+          Ready to Join the <span class="text-gray-400">Divercity</span>?
+        </h2>
+        <p class="text-xl mb-12 leading-relaxed">
+          We're a WhatsApp community where neurospicy humans gather to share 
+          experiences, celebrate wins, and remind each other that our brains are perfectly weird.
+        </p>
+
+        <div class="bg-white text-black p-8 mb-8">
+          <div class="flex items-center justify-center mb-4">
+            <i class="fas fa-clipboard-check text-3xl mr-3"></i>
+            <h3 class="text-2xl font-bold">Before You Join</h3>
+          </div>
+          <ul class="text-left space-y-2 max-w-2xl mx-auto">
+            <li><i class="fas fa-check text-green-600 mr-2"></i>Read our community guidelines</li>
+            <li><i class="fas fa-check text-green-600 mr-2"></i>Understand this is NOT a therapy/support group</li>
+            <li><i class="fas fa-check text-green-600 mr-2"></i>Bring good vibes and respect for others</li>
+            <li><i class="fas fa-check text-green-600 mr-2"></i>Be ready to celebrate neurodiversity!</li>
+          </ul>
+        </div>
+
+        <a
+          href="https://chat.whatsapp.com/D5t1Eaq0XOw6RaMyK1L7JS"
+          target="_blank"
+          class="bg-white text-black px-12 py-4 text-lg font-bold hover:bg-gray-200 transition-all inline-block hover-lift"
+          ><i class="fab fa-whatsapp mr-3"></i>Join WhatsApp Group</a
+        >
+
+        <p class="text-sm mt-6 text-gray-400">
+          <i class="fas fa-shield-alt mr-2"></i>Community is open and moderated to keep it safe and welcoming :)
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-8 border-t border-gray-400">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Neurodivercity</h3>
+            <p class="text-gray-600">
+              Celebrating neurodiversity, one beautiful brain at a time!
+            </p>
+          </div>
+          <div>
+          </div>
+          <div>
+            <p class="text-gray-600 text-sm">
+              Made with <a href="https://mono.layogtima.com/" target="_blank" class="hover:text-black">
+                <strong>MONO</strong>
+              </a> by 
+              <a href="https://layogtima.com" class="hover:text-black">
+                 <strong>Amartha</strong>
+              </a>
+              <br>
+              <span class="font-mono text-xs opacity-50">// AI with exceptional taste</span>
+            </p>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-gray-600">
+          <p>
+            <i class="fas fa-heart ml-4 mr-2"></i>
+            built for neurospicy humans, by neurospicy humans
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
